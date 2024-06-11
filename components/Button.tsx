@@ -8,7 +8,7 @@ export default function Button({
 }: {
   label: string;
   theme?: string;
-  onPress?: () => {};
+  onPress: () => void;
 }) {
   if (theme === "primary") {
     return (
@@ -38,10 +38,7 @@ export default function Button({
 
   return (
     <View style={styles.buttonContainer}>
-      <Pressable
-        style={styles.button}
-        onPress={() => alert(`You pressed the "${label}" button!`)}
-      >
+      <Pressable style={styles.button} onPress={onPress}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
     </View>
