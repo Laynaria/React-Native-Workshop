@@ -1,8 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { Text, View, StyleSheet, Image } from "react-native";
 
-import ImageViewer from "@/components/images-components/ImageViewer";
-import Button from "@/components/buttons-components/Button";
+import ImageViewer from "@/components/ImageViewer";
+import Button from "@/components/Button";
 
 const PlaceholderImage = require("../assets/images/background-image.png");
 
