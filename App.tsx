@@ -18,13 +18,13 @@ import EmojiSticker from "./components/EmojiSticker";
 const PlaceholderImage = require("./assets/images/background-image.png");
 
 export default function Index() {
-  const [selectedImg, setSelectedImg] = useState(null);
-  const [showAppOptions, setShowAppOptions] = useState(false);
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const [showAppOptions, setShowAppOptions] = useState<boolean>(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [pickedEmoji, setPickedEmoji] = useState(null);
   const [status, requestPermission] = MediaLibrary.usePermissions();
 
-  const imageRef = useRef();
+  const imageRef = useRef<any>();
 
   if (status === null) {
     requestPermission();

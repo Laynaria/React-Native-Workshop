@@ -5,7 +5,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 
-export default function EmojiSticker({ imageSize, stickerSource }) {
+export default function EmojiSticker({ imageSize, stickerSource }: any) {
   const scaleImage = useSharedValue(imageSize);
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -33,8 +33,12 @@ export default function EmojiSticker({ imageSize, stickerSource }) {
   const containerStyle = useAnimatedStyle(() => {
     return {
       transform: [
-        { translateX: translateX.value },
-        { translateY: translateY.value },
+        {
+          translateX: translateX.value,
+        },
+        {
+          translateY: translateY.value,
+        },
       ],
     };
   });

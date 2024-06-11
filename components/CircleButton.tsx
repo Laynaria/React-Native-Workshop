@@ -1,7 +1,7 @@
 import { Pressable, View, StyleSheet } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-export default function CircleButton({ onPress }) {
+export default function ({ onPress }: { onPress: () => void }) {
   return (
     <View style={styles.circleButtonContainer}>
       <Pressable style={styles.circleButton} onPress={onPress}>
